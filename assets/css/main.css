@@ -39,6 +39,7 @@ ol, ul {
 
 blockquote, q {
 	quotes: none;
+	opacity: .8;
 }
 
 	blockquote:before, blockquote:after, q:before, q:after {
@@ -3352,6 +3353,8 @@ input, select, textarea {
 		}
 
 		#banner .logo {
+			width: 18%;
+			max-width: 75px;
 			-moz-transition: opacity 2s ease, -moz-transform 1s ease;
 			-webkit-transition: opacity 2s ease, -webkit-transform 1s ease;
 			-ms-transition: opacity 2s ease, -ms-transform 1s ease;
@@ -4109,4 +4112,59 @@ input, select, textarea {
 			padding: 2em 1.5em 0.1em 1.5em ;
 		}
 
+	}
+
+	h3.right {
+		text-align: right;
+	}
+
+	.item img {
+		max-width: 40%;
+	}
+	.item .content {
+		display: flex;
+		margin-bottom: 1.25em;
+	}
+
+	.item .content.right {
+		flex-direction: row-reverse;
+	}
+
+	.item .text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.item .text.right {
+		margin-left: 1em;
+	}
+	.item .text.left {
+		margin-right: 1em;
+	}
+
+	.quote {
+		font-size: 1.5em;
+		opacity: .6;
+		font-weight: bold;
+		margin: 4em 0;
+	}
+
+	@media screen and (max-width: 736px) {
+		.item .content {
+			flex-direction: column !important
+		}
+
+		.item .text {
+			margin-top: 1em;
+		}
+
+		.item img {
+			max-width: 100%;
+		}
+
+		h3.right {
+			text-align: left;
+		}
 	}
