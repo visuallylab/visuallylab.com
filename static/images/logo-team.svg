@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="438px" height="366px" viewBox="0 0 438 366" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>编组@1.5x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.803430163 0 151.827069 0 151.827069 156.604217 0.803430163 156.604217"></polygon>
+    </defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HOME-1440-x-1024" transform="translate(-501.000000, -4503.000000)">
+            <g id="编组" transform="translate(501.000000, 4503.000000)">
+                <path d="M0.949924509,1 C165.703925,133.007476 498.43869,50.9153358 428.468188,366 C318.466052,176.982347 -20.2238326,328.378484 0.949924509,1" id="Fill-1" fill="#3562AD"></path>
+                <g transform="translate(275.000000, 0.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-6"></g>
+                    <path d="M126.230904,156.604217 C150.092165,122.645117 159.836561,74.1806445 144.312729,-0.000428181818 C107.073834,41.6231264 53.7320195,67.2569445 0.803430163,90.91399 C49.1078993,106.078763 93.9449932,125.201363 126.230904,156.604217" id="Fill-5" fill="#3562AD" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,8 @@
+#ct-container .ct-toast {
+  font-weight: 100;
+  background-color: rgba(36, 36, 36, 0.95);
+  color: rgba(255, 255, 255, 0.95);
+  box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.1);
+  max-width: 20vw;
+  word-break: break-word;
+}
