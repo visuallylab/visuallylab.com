@@ -18,7 +18,7 @@ script:
 - touch out/CNAME
 - echo "www.visuallylab.com" > out/CNAME
 env:
-- NODE_OPTIONS="--max_old_space_size=4096" DEPLOY_ENV=github PROJ_NAME=visuallylab.com
+- NODE_OPTIONS="--max_old_space_size=4096" DEPLOY_ENV=production PROJ_NAME=visuallylab.com
 deploy:
   provider: pages
   skip_cleanup: true
