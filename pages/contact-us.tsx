@@ -18,7 +18,7 @@ const QRImage = styled.img`
 const Contact: NextPage = () => {
   return (
     <HomeLayout mode="light" footer={false}>
-      <Section fullscreen={true}>
+      <Section fullscreen>
         <QRImage
           onClick={() => window.open('https://www.facebook.com/visuallylab/')}
           src={getRelativePath('/static/images/qr-code.png')}

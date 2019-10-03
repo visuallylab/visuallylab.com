@@ -67,6 +67,17 @@ const Wrapper = styled.div<{ size: number }>`
   background: none;
 `;
 
+const StatusBar = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+  background-color: ${p => p.theme.colors.error};
+`;
+
 const Jarvis: React.FC<TProps> = ({ size = 60 }) => {
   const {
     status,
@@ -159,28 +170,35 @@ const Jarvis: React.FC<TProps> = ({ size = 60 }) => {
   }, []);
 
   return (
-    <Container size={size}>
-      <AnimatedWrapper style={siriProps}>
-        <Title>{title}</Title>
-        <div id="jarvis-wave" />
-        <Message>{response.message}</Message>
-        <div style={{ margin: '1em 0', width: '100%' }}>
-          {suggestions.map(s => (
-            <Suggestion key={s.title + s.message} item={s} />
+    <>
+      <Container size={size}>
+        <AnimatedWrapper style={siriProps}>
+          <Title>{title}</Title>
+          <div id="jarvis-wave" />
+          <Message>{response.message}</Message>
+          <div style={{ margin: '1em 0', width: '100%' }}>
+            {suggestions.map(s => (
+              <Suggestion key={s.title + s.message} item={s} />
+            ))}
+          </div>
+        </AnimatedWrapper>
+        <Wrapper
+          size={size}
+          onClick={() =>
+            enabled ? jarvis && jarvis.disable() : jarvis && jarvis.enable()
+          }
+        >
+          {circleProps.map((circleProp, i) => (
+            <animated.div key={i} style={circleProp} />
           ))}
-        </div>
-      </AnimatedWrapper>
-      <Wrapper
-        size={size}
-        onClick={() =>
-          enabled ? jarvis && jarvis.disable() : jarvis && jarvis.enable()
-        }
-      >
-        {circleProps.map((circleProp, i) => (
-          <animated.div key={i} style={circleProp} />
-        ))}
-      </Wrapper>
-    </Container>
+        </Wrapper>
+      </Container>
+      {jarvis && !jarvis.canIUse() && (
+        <StatusBar>
+          <p>'Please use "Chrome" to open!'</p>
+        </StatusBar>
+      )}
+    </>
   );
 };
 

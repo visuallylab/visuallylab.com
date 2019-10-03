@@ -71,19 +71,26 @@ type TJarvisServiceProps = {
 
 export default class JarvisService {
   public props: TJarvisServiceProps;
-  private recognition: SpeechRecognition;
+  private recognition: SpeechRecognition | null = null;
   private recognizing: boolean = false;
 
   constructor(props: TJarvisServiceProps) {
     this.props = props;
-
-    // @ts-ignore
-    const Recognition = window.SpeechRecognition || webkitSpeechRecognition;
-    this.recognition = new Recognition() as SpeechRecognition;
+    try {
+      // @ts-ignore
+      const Recognition = window.SpeechRecognition || webkitSpeechRecognition;
+      this.recognition = new Recognition() as SpeechRecognition;
+    } catch (err) {
+      alert('Please use "Chrome" to open this experimental website! Thanks!');
+    }
     this.initialize();
 
     // DEFAULT: enable jarvis service
-    // this.enable();
+    this.enable();
+  }
+
+  canIUse() {
+    return !!this.recognition;
   }
 
   initialize() {
@@ -226,11 +233,17 @@ export default class JarvisService {
   };
 
   enable() {
-    this.recognition.start();
+    if (this.recognition) {
+      this.recognition.start();
+    } else {
+      alert('Please use "Chrome" to open this experimental website! Thanks!');
+    }
   }
 
   disable() {
-    this.recognition.stop();
+    if (this.recognition) {
+      this.recognition.stop();
+    }
   }
 
   encoded(src: {
