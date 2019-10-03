@@ -1,0 +1,70 @@
+{
+  "events": {
+    "trafficJam": {
+      "status": {
+        "msg": "下班人潮激增，出現三處塞車",
+        "btnText": "顯示資訊"
+      },
+      "detailXimenRdSec1": {
+        "msg": "西門路一段出現塞車路段",
+        "btnText": "查看"
+      },
+      "detailXimenRdSec2": {
+        "msg": "西門路二段出現塞車路段",
+        "btnText": "查看"
+      },
+      "detailZhongzhengRd": { "msg": "中正路出現塞車路段", "btnText": "查看" },
+      "reason": {
+        "msg": "可能由於一起車禍導致塞車",
+        "btnText": "顯示資訊"
+      },
+      "suggestion": {
+        "msg": "建議指派一位員警到此路口指揮交通",
+        "btnText": "我知道了"
+      }
+    },
+    "crowedTrain": {
+      "status": {
+        "msg": "下班人潮激增，鐵路高度擁擠",
+        "btnText": "顯示資訊"
+      },
+      "suggestion": {
+        "msg": "建議加開台南站南下車次",
+        "btnText": "我知道了"
+      }
+    }
+  },
+  "title": {
+    "Start": "交通概況",
+    "TrafficJam": "塞車分佈",
+    "FocusXimenRdSec1": "路段車次資料：西門路一段",
+    "FocusXimenRdSec2": "路段車次資料：西門路二段",
+    "FocusZhongzhengRd": "路段車次資料：中正路",
+    "ShowAccidentXimenRdSec1": "車禍路徑：西門路一段",
+    "ShowAccidentXimenRdSec2": "車禍路徑：西門路二段",
+    "ShowAccidentZhongzhengRd": "車禍路徑：中正路",
+    "TrainUtilization": "台鐵車次與車站人次分佈"
+  },
+  "panel": {
+    "averageSpeed": "平均時速: {{speed}} km/hr",
+    "carsAndScootersAmount": "目前城市中有 {{carsAmount}} 輛汽車、{{scooterAmount}} 輛機車行駛",
+    "accident": "一小時內有 1 件車禍，無人傷亡",
+    "bus": "公共運輸滿載率 67%，延誤率 13%，今日平均延誤 3 分鐘",
+    "trafficJam": "共有 {{trafficJamCount}} 處塞車，全長 {{trafficJamLength}} 公尺",
+    "trainLegend": {
+      "maxCapacity": "承載人數上限",
+      "current": "目前已承載人數",
+      "nearTheLimit": "承載人數已接近上限"
+    }
+  },
+  "trafficJamTooltipText": "塞車",
+  "indicator": {
+    "Normal": "順暢通行",
+    "RoadCrowded": "馬路擁擠",
+    "TrainCrowded": "鐵路擁擠"
+  },
+  "chart": {
+    "legend": "每分鐘車流量",
+    "accidentLabel": "車禍"
+  }
+}

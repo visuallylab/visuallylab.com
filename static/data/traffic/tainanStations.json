@@ -1,0 +1,137 @@
+[
+  {
+    "StationID": "4270",
+    "StationName": { "Zh_tw": "\u4e2d\u6d32", "En": "Zhongzhou" },
+    "StationPosition": [120.249932, 22.909584],
+    "StationAddress": "71754\u81fa\u5357\u5e02\u4ec1\u5fb7\u5340\u4e2d\u6d32\u91cc\u4e2d\u6d32 298 \u4e4b 5 \u865f",
+    "StationPhone": "6-2667191",
+    "StationClass": "2",
+    "StationURL": "http://tip.railway.gov.tw/tra-tip-web/tip/tip00H/tipH41/viewStaInfo/4270"
+  },
+  {
+    "StationID": "4260",
+    "StationName": { "Zh_tw": "\u4ec1\u5fb7", "En": "Rende" },
+    "StationPosition": [120.2432267, 22.9215274],
+    "StationAddress": "71750\u81fa\u5357\u5e02\u4ec1\u5fb7\u5340\u4fdd\u5b89\u91cc\u6c38\u5fb7\u8def 10 \u865f",
+    "StationPhone": "6-2669383",
+    "StationClass": "4",
+    "StationURL": "http://tip.railway.gov.tw/tra-tip-web/tip/tip00H/tipH41/viewStaInfo/4260"
+  },
+  {
+    "StationID": "4250",
+    "StationName": { "Zh_tw": "\u4fdd\u5b89", "En": "Bao'an" },
+    "StationPosition": [120.2315935, 22.9329397],
+    "StationAddress": "71755\u81fa\u5357\u5e02\u4ec1\u5fb7\u5340\u4fdd\u5b89\u91cc\u6587\u8ce2\u8def\u4e00\u6bb5 529 \u5df7 10 \u865f",
+    "StationPhone": "6-2665988",
+    "StationClass": "3",
+    "StationURL": "http://tip.railway.gov.tw/tra-tip-web/tip/tip00H/tipH41/viewStaInfo/4250"
+  },
+  {
+    "StationID": "4220",
+    "StationName": { "Zh_tw": "\u81fa\u5357", "En": "Tainan" },
+    "StationPosition": [120.2129662, 22.9971443],
+    "StationAddress": "70146\u81fa\u5357\u5e02\u6771\u5340\u6210\u5927\u91cc\u5317\u9580\u8def\u4e8c\u6bb5 4 \u865f",
+    "StationPhone": "6-2261314",
+    "StationClass": "1",
+    "StationURL": "http://tip.railway.gov.tw/tra-tip-web/tip/tip00H/tipH41/viewStaInfo/4220"
+  },
+  {
+    "StationID": "4210",
+    "StationName": { "Zh_tw": "\u5927\u6a4b", "En": "Daqiao" },
+    "StationPosition": [120.2244201, 23.0193991],
+    "StationAddress": "71049\u81fa\u5357\u5e02\u6c38\u5eb7\u5340\u897f\u6a4b\u91cc\u4e2d\u83ef\u8def 835 \u865f",
+    "StationPhone": "6-3021755",
+    "StationClass": "4",
+    "StationURL": "http://tip.railway.gov.tw/tra-tip-web/tip/tip00H/tipH41/viewStaInfo/4210"
+  },
+  {
+    "StationID": "4200",
+    "StationName": { "Zh_tw": "\u6c38\u5eb7", "En": "Yongkang" },
+    "StationPosition": [120.2535236, 23.0383377],
+    "StationAddress": "71090\u81fa\u5357\u5e02\u6c38\u5eb7\u5340\u57d4\u5712\u91cc\u4e2d\u5c71\u8def 459 \u865f",
+    "StationPhone": "6-2323305",
+    "StationClass": "2",
+    "StationURL": "http://tip.railway.gov.tw/tra-tip-web/tip/tip00H/tipH41/viewStaInfo/4200"
+  },
+  {
+    "StationID": "4190",
+    "StationName": { "Zh_tw": "\u65b0\u5e02", "En": "Xinshi" },
+    "StationPosition": [120.2944406, 23.0643755],
+    "StationAddress": "74448\u81fa\u5357\u5e02\u65b0\u5e02\u5340\u65b0\u548c\u91cc\u4e2d\u83ef\u8def 1 \u865f",
+    "StationPhone": "6-5996911",
+    "StationClass": "3",
+    "StationURL": "http://tip.railway.gov.tw/tra-tip-web/tip/tip00H/tipH41/viewStaInfo/4190"
+  },
+  {
+    "StationID": "4180",
+    "StationName": { "Zh_tw": "\u5357\u79d1", "En": "Nanke" },
+    "StationPosition": [120.307701, 23.100596],
+    "StationAddress": "74443\u81fa\u5357\u5e02\u65b0\u5e02\u5340\u5927\u71df\u91cc\u5927\u71df 287-300 \u865f",
+    "StationPhone": "6-5896356",
+    "StationClass": "4",
+    "StationURL": "http://tip.railway.gov.tw/tra-tip-web/tip/tip00H/tipH41/viewStaInfo/4180"
+  },
+  {
+    "StationID": "4170",
+    "StationName": { "Zh_tw": "\u5584\u5316", "En": "Shanhua" },
+    "StationPosition": [120.3065509, 23.1333235],
+    "StationAddress": "74154\u81fa\u5357\u5e02\u5584\u5316\u5340\u5149\u6587\u91cc\u4e2d\u5c71\u8def 1 \u865f",
+    "StationPhone": "6-5837301",
+    "StationClass": "2",
+    "StationURL": "http://tip.railway.gov.tw/tra-tip-web/tip/tip00H/tipH41/viewStaInfo/4170"
+  },
+  {
+    "StationID": "4160",
+    "StationName": { "Zh_tw": "\u62d4\u6797", "En": "Balin" },
+    "StationPosition": [120.321185, 23.172291],
+    "StationAddress": "72044\u81fa\u5357\u5e02\u5b98\u7530\u5340\u62d4\u6797\u91cc\u62d4\u5b50\u6797 83 \u4e4b 1 \u865f",
+    "StationPhone": "6-5791664",
+    "StationClass": "5",
+    "StationURL": "http://tip.railway.gov.tw/tra-tip-web/tip/tip00H/tipH41/viewStaInfo/4160"
+  },
+  {
+    "StationID": "4150",
+    "StationName": { "Zh_tw": "\u9686\u7530", "En": "Longtian" },
+    "StationPosition": [120.318898, 23.1926666],
+    "StationAddress": "72041\u81fa\u5357\u5e02\u5b98\u7530\u5340\u9686\u7530\u91cc\u4e2d\u5c71\u8def\u4e00\u6bb5 1 \u865f",
+    "StationPhone": "6-5791664",
+    "StationClass": "2",
+    "StationURL": "http://tip.railway.gov.tw/tra-tip-web/tip/tip00H/tipH41/viewStaInfo/4150"
+  },
+  {
+    "StationID": "4140",
+    "StationName": { "Zh_tw": "\u6797\u9cf3\u71df", "En": "Linfengying" },
+    "StationPosition": [120.320973, 23.242592],
+    "StationAddress": "73444\u81fa\u5357\u5e02\u516d\u7532\u5340\u4e2d\u793e\u91cc\u6797\u9cf3\u71df 16 \u865f",
+    "StationPhone": "6-6986086",
+    "StationClass": "4",
+    "StationURL": "http://tip.railway.gov.tw/tra-tip-web/tip/tip00H/tipH41/viewStaInfo/4140"
+  },
+  {
+    "StationID": "4130",
+    "StationName": { "Zh_tw": "\u67f3\u71df", "En": "Liuying" },
+    "StationPosition": [120.322519, 23.27762],
+    "StationAddress": "73657\u81fa\u5357\u5e02\u67f3\u71df\u5340\u6771\u6607\u91cc\u5efa\u570b\u8def 1 \u865f",
+    "StationPhone": "6-6226450",
+    "StationClass": "4",
+    "StationURL": "http://tip.railway.gov.tw/tra-tip-web/tip/tip00H/tipH41/viewStaInfo/4130"
+  },
+  {
+    "StationID": "4120",
+    "StationName": { "Zh_tw": "\u65b0\u71df", "En": "Xinying" },
+    "StationPosition": [120.323055, 23.3067319],
+    "StationAddress": "73045\u81fa\u5357\u5e02\u65b0\u71df\u5340\u4e2d\u71df\u91cc\u4e2d\u5c71\u8def 1 \u865f",
+    "StationPhone": "6-6322104",
+    "StationClass": "1",
+    "StationURL": "http://tip.railway.gov.tw/tra-tip-web/tip/tip00H/tipH41/viewStaInfo/4120"
+  },
+  {
+    "StationID": "4110",
+    "StationName": { "Zh_tw": "\u5f8c\u58c1", "En": "Houbi" },
+    "StationPosition": [120.360603, 23.366247],
+    "StationAddress": "73143\u81fa\u5357\u5e02\u5f8c\u58c1\u5340\u5f8c\u58c1\u91cc\u5f8c\u58c1 77 \u865f",
+    "StationPhone": "6-6872055",
+    "StationClass": "4",
+    "StationURL": "http://tip.railway.gov.tw/tra-tip-web/tip/tip00H/tipH41/viewStaInfo/4110"
+  }
+]

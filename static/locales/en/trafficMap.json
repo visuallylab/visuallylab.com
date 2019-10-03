@@ -1,0 +1,73 @@
+{
+  "events": {
+    "trafficJam": {
+      "status": {
+        "msg": "found three traffic jams",
+        "btnText": "show"
+      },
+      "detailXimenRdSec1": {
+        "msg": "There is a traffic jam on Ximen Road Section 1",
+        "btnText": "check"
+      },
+      "detailXimenRdSec2": {
+        "msg": "There is a traffic jam on Ximen Road Section 2",
+        "btnText": "check"
+      },
+      "detailZhongzhengRd": {
+        "msg": "There is a traffic jam on Zhongzheng Road Section 1",
+        "btnText": "check"
+      },
+      "reason": {
+        "msg": "may be caused by an accident",
+        "btnText": "check"
+      },
+      "suggestion": {
+        "msg": "Suggest assign a police here to clear traffic",
+        "btnText": "okay"
+      }
+    },
+    "crowedTrain": {
+      "status": {
+        "msg": "Currently on rush hour, railway is getting more congested",
+        "btnText": "show info"
+      },
+      "suggestion": {
+        "msg": "Suggest add extra trains towards the north",
+        "btnText": "Okay!"
+      }
+    }
+  },
+  "title": {
+    "Start": "Traffic Status",
+    "TrafficJam": "Traffic Jam Distribution",
+    "FocusXimenRdSec1": "Car Passes Chart: Ximen Road Section 1",
+    "FocusXimenRdSec2": "Car Passes Chart: Ximen Road Section 2",
+    "FocusZhongzhengRd": "Car Passes Chart: Zhongzheng Road",
+    "ShowAccidentXimenRdSec1": "Accident Path: Ximen Road Section 1",
+    "ShowAccidentXimenRdSec2": "Accident Path: Ximen Road Section 2",
+    "ShowAccidentZhongzhengRd": "Accident Path: Zhongzheng Road",
+    "TrainUtilization": "Numbers of people Distribution in Railway stations and trains "
+  },
+  "panel": {
+    "averageSpeed": "average speed: {{speed}} km/hr",
+    "carsAndScootersAmount": "{{carsAmount}} cars、{{scooterAmount}} scooters on the road",
+    "accident": " 1 accident in a hour, nobody injured",
+    "bus": "Bus passenger utilization rate 67%, delay rate 13%, average delay 3 minutes today",
+    "trafficJam": "{{trafficJamCount}} traffic jams，total length {{trafficJamLength}} meters",
+    "trainLegend": {
+      "maxCapacity": "max capacity",
+      "current": "current",
+      "nearTheLimit": "near the max"
+    }
+  },
+  "trafficJamTooltipText": "traffic jam",
+  "indicator": {
+    "Normal": "Normal",
+    "RoadCrowded": "ROAD CROWDED",
+    "TrainCrowded": "RAILWAY CROWDED"
+  },
+  "chart": {
+    "legend": "passed cars per minute",
+    "accidentLabel": "car accident"
+  }
+}
