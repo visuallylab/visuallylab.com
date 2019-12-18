@@ -38,9 +38,9 @@ const BG = styled.img`
 
 const Show = () => {
   return (
-    <Section alignItems="center" justifyContent="center" fullscreen={true}>
+    <Section alignItems="center" justifyContent="center" fullscreen>
       <Wrapper>
-        <ScrollAnimation animateIn="pulse" initiallyVisible={true}>
+        <ScrollAnimation animateIn="pulse" initiallyVisible>
           <StyledTitle>
             資視科技擅長打造以「體驗」出發的核心應用。我們為您的產品客製化適合的解決方案。顯示精準資訊，讓您的產品一舉吸睛。
           </StyledTitle>

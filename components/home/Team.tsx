@@ -15,11 +15,17 @@ const Wrapper = styled.div`
 `;
 
 const TitleWrapper = styled.div<{ src: string }>`
-  margin-top: 3%;
   position: relative;
-  background: url(${p => p.src}) center no-repeat/contain;
-  width: 400px;
-  height: 400px;
+  margin-top: 3%;
+  background: url(${p => p.src}) no-repeat center / contain;
+  width: 200px;
+  height: 200px;
+
+  ${media('desktop')} {
+    width: 400px;
+    height: 400px;
+  }
+
   ${media('largeDesktop')} {
     width: 470px;
     height: 470px;
@@ -33,9 +39,13 @@ const StyledTitle = styled(Title)`
   color: ${p => p.theme.colors.white};
   left: 50%;
   transform: translateX(-50%);
-  top: 90px;
+  top: 75px;
+  font-size: 2.25rem;
+  ${media('desktop')} {
+    top: 128px;
+  }
   ${media('largeDesktop')} {
-    top: 104px;
+    top: 164px;
   }
 `;
 
@@ -43,8 +53,11 @@ const InfoWrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+
   ${media('desktop')} {
+    flex-direction: row;
     width: 90%;
     margin: 0 5%;
   }
@@ -74,7 +87,11 @@ const team: TMember[] = [
 
 const Team = () => {
   return (
-    <Section justifyContent="center" alignItems="center" fullscreen={true}>
+    <Section
+      justifyContent="center"
+      alignItems="center"
+      style={{ minHeight: '100vh' }}
+    >
       <Wrapper>
         <TitleWrapper src={getRelativePath('/static/images/logo-team.svg')}>
           <StyledTitle>專業團隊</StyledTitle>

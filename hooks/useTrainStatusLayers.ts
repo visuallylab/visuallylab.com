@@ -153,6 +153,7 @@ const useTrainStatusLayers = (enable: boolean) => {
           : d.warning
           ? [255, 60, 60, 255]
           : [200, 200, 200, 255],
+      // @ts-ignore
       transitions: {
         getPosition: intervalMs,
         getLineColor: intervalMs / 2,
@@ -162,6 +163,7 @@ const useTrainStatusLayers = (enable: boolean) => {
     }),
     new TextLayer({
       id: 'station-label-layer',
+      // @ts-ignore
       data: 'static/data/traffic/tainanStations.json',
       pickable: true,
       sizeUnits: 'meters',
@@ -171,7 +173,9 @@ const useTrainStatusLayers = (enable: boolean) => {
       fontWeight: 900,
       getColor: (_: any) => [255, 255, 255, 255],
       getSize: (_: any) => 300,
+      // @ts-ignore
       getAlignmentBaseline: 'bottom',
+      // @ts-ignore
       getPixelOffset: [0, -20],
       sizeMinPixels: 25,
     }),

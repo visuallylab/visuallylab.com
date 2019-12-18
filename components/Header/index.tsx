@@ -40,7 +40,8 @@ const RightWrapper = styled.ul<{ mode: 'light' | 'dark' }>`
     p.mode === 'light' ? p.theme.colors.primary : p.theme.colors.white};
 `;
 
-const Li = styled.li`
+const Li = styled.li<{ mobileHide?: boolean; desktopHide?: boolean }>`
+  display: ${p => (p.mobileHide ? 'none' : 'block')};
   cursor: pointer;
   margin-right: 1rem;
   letter-spacing: 0.51px;
@@ -51,6 +52,10 @@ const Li = styled.li`
   > a {
     text-decoration: none;
   }
+
+  ${media('desktop')} {
+    display: ${p => (p.desktopHide ? 'none' : 'block')};
+  }
 `;
 
 type TProps = {
@@ -59,23 +64,32 @@ type TProps = {
 
 const Header: SFC<TProps> = ({ mode = 'light' }) => {
   const { y, oldY } = useWindowScroll();
+  const hideUp = y > 0 && y > oldY;
+
   const MemoHeader = useMemo(
     () => (
-      <Container hideUp={y > 0 && y > oldY} mode={mode}>
+      <Container hideUp={hideUp} mode={mode}>
         <LogoTitle mode={mode} />
         <RightWrapper mode={mode}>
-          <Li>
+          <Li desktopHide>
             <Link href="/service">
-              <a>智慧商業決策方案</a>
+              <Button style={{ width: '9rem' }}>智慧決策方案</Button>
             </Link>
           </Li>
-          <Link href="/demo">
-            <Button>體驗</Button>
-          </Link>
+          <Li mobileHide>
+            <Link href="/service">
+              <a>智慧決策方案</a>
+            </Link>
+          </Li>
+          <Li mobileHide>
+            <Link href="/demo">
+              <Button>體驗</Button>
+            </Link>
+          </Li>
         </RightWrapper>
       </Container>
     ),
-    [y > 0 && y > oldY],
+    [hideUp],
   );
 
   return MemoHeader;

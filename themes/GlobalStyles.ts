@@ -19,6 +19,10 @@ export default createGlobalStyle`
       font-size: 16px;
     }
   }
+  
+  a {
+    text-decoration: none;
+  }
 
   p {
     margin: 0;

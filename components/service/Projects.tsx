@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Section from '../Section';
+import { media } from '@/utils/theme';
 
 const ContentWrapper = styled.div`
   width: 100%;
@@ -17,11 +18,21 @@ const Row = styled.div`
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 `;
 const Icon = styled.img`
   width: 150px;
   height: 150px;
+  margin-bottom: 10px;
+`;
+
+const IconWrapper = styled.a`
+  width: 70%;
+  text-align: center;
+  margin-bottom: 10%;
+  ${media('pad')} {
+    width: 25%;
+  }
 `;
 
 const Title = styled.h2`
@@ -35,24 +46,28 @@ export default () => (
     <ContentWrapper>
       <Title>社會影響力專案</Title>
       <Row>
-        <a
+        <IconWrapper
           href="https://www.taiwanstat.com/vp-tainan/index.html"
           target="_blank"
         >
           <Icon srcSet="/static/images/tainan-stat.png 1x, /static/images/tainan-stat@2x.png 2x, /static/images/tainan-stat@3x.png 3x" />
-        </a>
-        <a href="https://www.taiwanstat.com/" target="_blank">
+          <p>用數據看台南</p>
+        </IconWrapper>
+        <IconWrapper href="https://www.taiwanstat.com/" target="_blank">
           <Icon srcSet="/static/images/taiwan-stat.png 1x, /static/images/taiwan-stat@2x.png 2x, /static/images/taiwan-stat@3x.png 3x" />
-        </a>
-        <a href="https://minedia.info/" target="_blank">
+          <p>用數據看台灣</p>
+        </IconWrapper>
+        <IconWrapper href="https://minedia.info/" target="_blank">
           <Icon srcSet="/static/images/minedia.png 1x, /static/images/minedia@2x.png 2x, /static/images/minedia@3x.png 3x" />
-        </a>
-        <a
+          <p>媒礦</p>
+        </IconWrapper>
+        <IconWrapper
           href="https://chrome.google.com/webstore/detail/instants/fghfkeajhcmoohfcfmdkajambdcanmob?hl=zh-TW"
           target="_blank"
         >
           <Icon srcSet="/static/images/instants.png 1x, /static/images/instants@2x.png 2x, /static/images/instants@3x.png 3x" />
-        </a>
+          <p>Instants</p>
+        </IconWrapper>
       </Row>
     </ContentWrapper>
   </Section>

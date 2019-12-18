@@ -7,6 +7,7 @@ import { getRelativePath } from '@/utils';
 import Title from '../Title';
 import SubTitle from '../SubTitle';
 import Description from '../Description';
+import { media } from '@/utils/theme';
 
 const Wrapper = styled.div<{ src: string; focus: boolean }>`
   position: relative;
@@ -29,10 +30,14 @@ const Mask = styled.div`
 const InfoWrapper = styled.div`
   will-change: transform;
   position: absolute;
-  width: 50%;
-  left: 10%;
+  width: 90%;
+  left: 5%;
   top: 50%;
   transform: translateY(-50%);
+
+  ${media('pad')} {
+    width: 50%;
+  }
 `;
 
 const Design = () => {
@@ -48,7 +53,7 @@ const Design = () => {
       ref={elementRef}
       justifyContent="center"
       alignItems="center"
-      fullscreen={true}
+      fullscreen
     >
       <Wrapper
         src={getRelativePath('/static/images/bg-design.jpg')}
