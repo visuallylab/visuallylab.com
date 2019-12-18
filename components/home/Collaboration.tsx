@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Section from '@/components/Section';
 import { getRelativePath } from '@/utils';
+import { media } from '@/utils/theme';
 
 const StyledSection = styled(Section)`
   background-color: ${p => p.theme.colors.lightGrey};
@@ -16,15 +17,23 @@ const Title = styled.h2`
 const Wrapper = styled.div`
   display: flex;
   width: 90%;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  ${media('pad')} {
+    flex-direction: row;
+  }
 `;
 
 const LogoWrapper = styled.div`
-  width: 21%;
+  width: 50%;
   display: flex;
   justify-content: center;
+  margin-bottom: 10%;
+  ${media('pad')} {
+    width: 21%;
+  }
 `;
 
 const Logo = styled.img<{ scale?: number }>`

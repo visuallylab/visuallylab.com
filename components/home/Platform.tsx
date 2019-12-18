@@ -4,6 +4,7 @@ import Title from '../Title';
 import { getRelativePath } from '@/utils';
 import { useRef, useEffect, useState } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { media } from '@/utils/theme';
 
 const Wrapper = styled.div`
   width: 92%;
@@ -23,31 +24,47 @@ const ImageWrapper = styled.div`
 `;
 
 const Img = styled.img`
-  height: 100%;
+  width: 100%;
+  ${media('desktop')} {
+    width: auto;
+    height: 100%;
+  }
 `;
 
 const DeskWrapper = styled(ScrollAnimation)<{ width: number }>`
   position: absolute;
-  left: ${p => (p.width ? `calc(50% - ${p.width / 2}px)` : '50%')};
   height: 100%;
   bottom: 0;
-  transform: translateX(-50%);
+  ${media('desktop')} {
+    transform: translateX(-50%);
+    left: ${p => (p.width ? `calc(50% - ${p.width / 2}px)` : '50%')};
+  }
 `;
 
 const PhoneWrapper = styled(ScrollAnimation)<{ x: number }>`
+  display: none;
   position: absolute;
   bottom: 0;
   left: ${p => (p.x ? `${p.x - 50}px` : '15%')};
   height: 50%;
   transform: translateX(-50%);
+
+  ${media('desktop')} {
+    display: 'block';
+  }
 `;
 
 const TabWrapper = styled(ScrollAnimation)<{ x: number }>`
+  display: none;
   position: absolute;
   bottom: 0;
   height: 70%;
   left: ${p => (p.x ? `${p.x}px` : '80%')};
   transform: translateX(-50%);
+
+  ${media('desktop')} {
+    display: 'block';
+  }
 `;
 
 const Platform = () => {
@@ -82,11 +99,11 @@ const Platform = () => {
   }, []);
 
   return (
-    <Section alignItems="center" justifyContent="center" fullscreen={true}>
+    <Section alignItems="center" justifyContent="center" fullscreen>
       <Wrapper>
         <ScrollAnimation animateIn="fadeInUp">
           <StyledTitle>
-            跨平台、全適應裝置應用
+            跨平台、全裝置應用
             <br />
             讓您的產品隨心所欲地發布
           </StyledTitle>

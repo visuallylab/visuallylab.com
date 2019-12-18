@@ -18,7 +18,7 @@ const LogoWrapper = styled(ScrollAnimation)`
 
 const Title = styled.h1`
   margin: 2rem 0 1rem;
-  font-size: 5rem;
+  font-size: 3.5rem;
   letter-spacing: 4px;
   font-weight: bold;
   background-image: ${p =>
@@ -26,6 +26,10 @@ const Title = styled.h1`
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  ${media('desktop')} {
+    font-size: 5rem;
+  }
 `;
 
 const Description = styled.p`
@@ -48,7 +52,7 @@ const Bg = styled.img`
 
 const Landing = () => {
   return (
-    <Section justifyContent="center" alignItems="center" fullscreen={true}>
+    <Section justifyContent="center" alignItems="center" fullscreen>
       <Bg src={getRelativePath('/static/images/bg-ball-stream.svg')} />
       <LogoWrapper animateIn="fadeInUp">
         <Logo src={getRelativePath('/static/images/home-logo-v.svg')} />

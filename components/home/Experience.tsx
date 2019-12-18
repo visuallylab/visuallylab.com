@@ -7,14 +7,20 @@ import Title from '../Title';
 import SubTitle from '../SubTitle';
 import Description from '../Description';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { media } from '@/utils/theme';
 
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   width: 92%;
   height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+  ${media('pad')} {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 
 const StyledSub = styled(SubTitle)`
@@ -22,18 +28,36 @@ const StyledSub = styled(SubTitle)`
 `;
 
 const IdeaImg = styled.img`
-  width: 40%;
+  width: 60%;
   max-height: 50%;
+  margin-top: 10%;
+
+  ${media('pad')} {
+    margin-top: 0;
+    width: 40%;
+  }
+
+  ${media('desktop')} {
+    width: 30%;
+  }
 `;
 
 const InfoWrapper = styled.div`
-  width: 60%;
-  padding: 0 10px 0 10%;
+  width: 100%;
+  padding: 10% 10px;
+
+  ${media('pad')} {
+    width: 60%;
+  }
 `;
 
 const Experience = () => {
   return (
-    <Section justifyContent="center" alignItems="center" fullscreen={true}>
+    <Section
+      justifyContent="center"
+      alignItems="center"
+      style={{ minHeight: '100vh' }}
+    >
       <Wrapper>
         <IdeaImg src={getRelativePath('/static/images/idea.svg')} />
         <InfoWrapper>

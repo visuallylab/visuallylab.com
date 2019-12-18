@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { FC } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { media } from '@/utils/theme';
 
 const Wrapper = styled(ScrollAnimation)`
   position: relative;
@@ -8,17 +9,21 @@ const Wrapper = styled(ScrollAnimation)`
   flex-direction: column;
   align-items: center;
   padding: 0 2%;
+  margin-bottom: 10%;
 
-  &:first-child {
-    top: -3rem;
-  }
+  ${media('desktop')} {
+    margin-bottom: 0;
+    &:first-child {
+      top: -3rem;
+    }
 
-  &:nth-child(3n) {
-    top: -3rem;
-  }
+    &:nth-child(3n) {
+      top: -3rem;
+    }
 
-  &:nth-child(3n - 1) {
-    top: 2rem;
+    &:nth-child(3n - 1) {
+      top: 2rem;
+    }
   }
 `;
 
@@ -70,7 +75,7 @@ type TProps = {
 
 const Member: FC<TProps> = ({ item, index }) => {
   return (
-    <Wrapper animateIn="fadeInUp" delay={index * 300} animateOnce={true}>
+    <Wrapper animateIn="fadeInUp" delay={index * 300} animateOnce>
       <Avatar src={item.avatar} />
       <Title>{item.title}</Title>
       <Name>{item.name}</Name>
