@@ -39,7 +39,7 @@
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.9.0",
     "react-icons": "^3.7.0",
-    "react-map-gl": "^5.0.4",
+    "react-map-gl": "^5.1.4",
     "react-spring": "^8.0.27",
     "recharts": "^1.6.2",
     "siriwave": "^1.2.4",
