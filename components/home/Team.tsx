@@ -42,10 +42,10 @@ const StyledTitle = styled(Title)`
   top: 75px;
   font-size: 2.25rem;
   ${media('desktop')} {
-    top: 90px;
+    top: 128px;
   }
   ${media('largeDesktop')} {
-    top: 104px;
+    top: 164px;
   }
 `;
 

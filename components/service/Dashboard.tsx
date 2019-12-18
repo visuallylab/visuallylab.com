@@ -7,21 +7,32 @@ import SubTitle from '../SubTitle';
 import Description from '../Description';
 import ContactUsButton from '../ContactUsButton';
 import Video from './Video';
+import { media } from '@/utils/theme';
 
 const ContentWrapper = styled.div`
   position: relative;
   width: 92%;
-  padding-left: 50%;
+  padding-left: 10%;
+  margin-bottom: 10%;
+  z-index: 1;
+  ${media('desktop')} {
+    margin-bottom: 0;
+    padding-left: 50%;
+  }
 `;
 
 const VideoWrapper = styled.div<{ playing: boolean }>`
-  position: absolute;
+  position: relative;
   width: ${p => (p.playing ? '100%' : '92%')};
-  left: 50%;
-  top: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  transition: width 1.5s linear;
-  z-index: 0;
+
+  ${media('desktop')} {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    transition: width 1.5s linear;
+    z-index: 0;
+  }
 `;
 
 const Mask = styled.div`
@@ -46,11 +57,7 @@ const Dashboard: React.FC = () => {
     delay: 300,
   });
   return (
-    <Section fullscreen={true} ref={container} focus={isPlaying}>
-      <VideoWrapper playing={isPlaying}>
-        {isPlaying && <Mask />}
-        <Video ref={player} src="/static/videos/dashboard.mp4" muted={true} />
-      </VideoWrapper>
+    <Section fullscreen ref={container} focus={isPlaying}>
       <ContentWrapper>
         <SubTitle focus={isPlaying}>管理者的省時最愛</SubTitle>
         <Title focus={isPlaying}>資料管理看板</Title>
@@ -61,6 +68,10 @@ const Dashboard: React.FC = () => {
           <ContactUsButton />
         </animated.div>
       </ContentWrapper>
+      <VideoWrapper playing={isPlaying}>
+        {isPlaying && <Mask />}
+        <Video ref={player} src="/static/videos/dashboard.mp4" muted />
+      </VideoWrapper>
     </Section>
   );
 };

@@ -8,21 +8,30 @@ import Description from '../Description';
 import ContactUsButton from '../ContactUsButton';
 import { useVideController } from '../../hooks/useVideController';
 import Video from './Video';
+import { media } from '@/utils/theme';
 
 const ContentWrapper = styled.div`
   position: relative;
   width: 92%;
   padding-left: 4rem;
+  margin-bottom: 10%;
+  z-index: 1;
+  ${media('desktop')} {
+    margin-bottom: 0;
+  }
 `;
 
 const VideoWrapper = styled.div<{ playing: boolean }>`
-  position: absolute;
+  position: relative;
   width: ${p => (p.playing ? '100%' : '92%')};
-  left: 50%;
-  top: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  transition: width 1.5s linear;
-  z-index: 0;
+  ${media('desktop')} {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    transition: width 1.5s linear;
+    z-index: 0;
+  }
 `;
 
 const Mask = styled.div`
@@ -35,7 +44,10 @@ const Mask = styled.div`
 `;
 
 const StyledDescription = styled(Description)`
-  max-width: 50%;
+  max-width: 80%;
+  ${media('pad')} {
+    max-width: 50%;
+  }
 `;
 
 const Traffic: React.FC = () => {
@@ -47,15 +59,7 @@ const Traffic: React.FC = () => {
     delay: 300,
   });
   return (
-    <Section fullscreen={true} ref={container} focus={isPlaying}>
-      <VideoWrapper playing={isPlaying}>
-        {isPlaying && <Mask />}
-        <Video
-          ref={player}
-          src={getRelativePath('/static/videos/traffic.mp4')}
-          muted={true}
-        />
-      </VideoWrapper>
+    <Section fullscreen ref={container} focus={isPlaying}>
       <ContentWrapper>
         <SubTitle focus={isPlaying}>自動化系統處理與回報</SubTitle>
         <Title focus={isPlaying}>
@@ -70,6 +74,14 @@ const Traffic: React.FC = () => {
           <ContactUsButton />
         </animated.div>
       </ContentWrapper>
+      <VideoWrapper playing={isPlaying}>
+        {isPlaying && <Mask />}
+        <Video
+          ref={player}
+          src={getRelativePath('/static/videos/traffic.mp4')}
+          muted
+        />
+      </VideoWrapper>
     </Section>
   );
 };

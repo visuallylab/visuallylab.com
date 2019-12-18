@@ -5,8 +5,8 @@ import { getRelativePath } from '@/utils';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 const Title = styled.h1`
-  margin: 4rem 0 2rem;
-  font-size: 5rem;
+  margin: 5rem 0 2rem;
+  font-size: 3rem;
   letter-spacing: 4px;
   font-weight: bold;
   background-image: linear-gradient(to right, #2b670f, #ffcc00);
@@ -14,10 +14,13 @@ const Title = styled.h1`
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
+  ${media('desktop')} {
+    font-size: 4rem;
+  }
 `;
 
 const DescriptionWrapper = styled(ScrollAnimation)`
-  width: 70%;
+  width: 85%;
   ${media('desktop')} {
     width: 588px;
   }
@@ -43,7 +46,7 @@ const Img = styled.img`
 `;
 
 export default () => (
-  <Section fullscreen={true}>
+  <Section fullscreen>
     <ScrollAnimation
       style={{ width: '100%', textAlign: 'center' }}
       animateIn="fadeInUp"

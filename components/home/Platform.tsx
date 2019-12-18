@@ -50,7 +50,7 @@ const PhoneWrapper = styled(ScrollAnimation)<{ x: number }>`
   transform: translateX(-50%);
 
   ${media('desktop')} {
-    display: 'block';
+    display: block;
   }
 `;
 
@@ -63,7 +63,7 @@ const TabWrapper = styled(ScrollAnimation)<{ x: number }>`
   transform: translateX(-50%);
 
   ${media('desktop')} {
-    display: 'block';
+    display: block;
   }
 `;
 

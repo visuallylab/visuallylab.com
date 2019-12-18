@@ -7,7 +7,7 @@ import ContactUsButton from '../ContactUsButton';
 
 const Wrapper = styled.div`
   position: relative;
-  width: 92%;
+  width: 90%;
   display: flex;
   flex-direction: column;
 
@@ -25,9 +25,9 @@ const StyledTitle = styled(Title)`
 `;
 
 export default () => (
-  <Section fullscreen={true} alignItems="center" justifyContent="center">
+  <Section fullscreen alignItems="center" justifyContent="center">
     <Wrapper>
-      <ScrollAnimation animateIn="pulse" initiallyVisible={true}>
+      <ScrollAnimation animateIn="pulse" initiallyVisible>
         <StyledTitle>
           我們擅長把您的資料轉化成精準的視覺呈現，客製化您的情境圖表。並且開發「智慧商業決策系統」一鍵管理內部數據流，幫助傳統企業節省成本超過50%！
         </StyledTitle>

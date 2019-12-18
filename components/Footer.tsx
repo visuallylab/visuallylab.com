@@ -11,6 +11,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 const StyledSection = styled(Section)`
   background-color: ${p => p.theme.backgroundColor};
   color: ${p => p.theme.colors.white};
+  padding: 0 1rem;
 `;
 
 const StyledSubTitle = styled(SubTitle)`
@@ -72,7 +73,7 @@ const Footer: FC<{ mode: 'light' | 'dark' }> = ({ mode }) => {
   const isLight = mode === 'light';
   return (
     <StyledSection
-      fullscreen={true}
+      fullscreen
       as="footer"
       src={
         isLight ? getRelativePath('/static/images/bg-footer.jpg') : undefined
