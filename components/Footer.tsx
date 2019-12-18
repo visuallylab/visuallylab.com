@@ -87,19 +87,19 @@ const Footer: FC<{ mode: 'light' | 'dark' }> = ({ mode }) => {
         </StyledSubTitle>
       </ScrollAnimation>
       <Ul>
-        <Li animateIn="fadeInUp" delay={300}>
+        <Li animateIn="fadeInUp" delay={300} offset={0}>
           <IconWrapper>
             <img src={getRelativePath('/static/images/home.svg')} />
           </IconWrapper>
           <p>台北市基隆路一段186號3樓之6</p>
         </Li>
-        <Li animateIn="fadeInUp" delay={500}>
+        <Li animateIn="fadeInUp" delay={500} offset={0}>
           <IconWrapper>
             <img src={getRelativePath('/static/images/mail.svg')} />
           </IconWrapper>
           <a href="contact@visuallylab.com">contact@visuallylab.com</a>
         </Li>
-        <Li animateIn="fadeInUp" delay={700}>
+        <Li animateIn="fadeInUp" delay={700} offset={0}>
           <IconWrapper>
             <img src={getRelativePath('/static/images/fb.svg')} />
           </IconWrapper>
@@ -108,7 +108,7 @@ const Footer: FC<{ mode: 'light' | 'dark' }> = ({ mode }) => {
           </a>
         </Li>
       </Ul>
-      <ScrollAnimation animateIn="fadeInUp" delay={800}>
+      <ScrollAnimation animateIn="fadeInUp" delay={800} offset={0}>
         <ContactUsButton color="white" />
       </ScrollAnimation>
       {!isLight && (

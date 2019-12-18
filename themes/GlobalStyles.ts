@@ -30,6 +30,7 @@ export default createGlobalStyle`
 
   ol, ul {
     list-style: none;
+    padding: 0;
   }
 
   input, button {

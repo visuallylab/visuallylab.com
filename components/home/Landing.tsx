@@ -58,14 +58,14 @@ const Landing = () => {
         <Logo src={getRelativePath('/static/images/home-logo-v.svg')} />
       </LogoWrapper>
       <ScrollAnimation
-        style={{ width: '100%', textAlign: 'center' }}
+        style={{ width: '95%', textAlign: 'center' }}
         animateIn="fadeInUp"
         delay={400}
       >
         <Title>體驗，極致完美</Title>
       </ScrollAnimation>
       <ScrollAnimation
-        style={{ width: '100%', textAlign: 'center' }}
+        style={{ width: '95%', textAlign: 'center' }}
         animateIn="fadeInUp"
         delay={600}
       >

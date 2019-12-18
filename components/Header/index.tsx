@@ -3,9 +3,8 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import Button from '@/components/Button';
 import { media } from '@/utils/theme';
-
-import LogoTitle from './LogoTitle';
 import useWindowScroll from '@/hooks/useWindowScroll';
+import LogoTitle from './LogoTitle';
 
 const Container = styled.header<{ hideUp: boolean; mode: 'light' | 'dark' }>`
   will-change: transform;

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { FC } from 'react';
 import { getRelativePath } from '@/utils';
 import Link from 'next/link';
+import { media } from '@/utils/theme';
 
 const Wrapper = styled.div`
   cursor: pointer;
@@ -20,7 +21,10 @@ const Title = styled.p<{ mode: 'light' | 'dark' }>`
   letter-spacing: 1px;
   color: ${p =>
     p.mode === 'light' ? p.theme.colors.primary : p.theme.colors.white};
-  font-size: ${p => p.theme.fontSize.big};
+
+  ${media('phone')} {
+    font-size: ${p => p.theme.fontSize.big};
+  }
 `;
 
 type TProps = {
