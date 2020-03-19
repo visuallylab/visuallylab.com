@@ -20,6 +20,9 @@ module.exports = withCSS(
       return {
         '/': { page: '/' },
         '/demo/index': { page: '/demo' },
+        '/demo/electricity': { page: 'demo/electricity' },
+        '/demo/traffic': { page: 'demo/traffic' },
+        '/contact-us': { page: 'contact-us' },
         '/service': { page: '/service' },
       };
     },
