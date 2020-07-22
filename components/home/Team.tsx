@@ -80,8 +80,8 @@ const team: TMember[] = [
   {
     name: '李至青',
     avatar: getRelativePath('/static/images/jhincing.jpg'),
-    title: '共同創辦人暨\n資深產品經理',
-    jobDescription: '擅於產品脈絡設計 / 軟體開發流程管理 / 資深軟體工程師',
+    title: '共同創辦人暨\n軟體工程師',
+    jobDescription: '網頁應用程式開發 / 軟體開發流程管理',
   },
 ];
 
