@@ -1,7 +1,9 @@
 import styled from 'styled-components';
+
 import Section from '@/components/Section';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
+
 import Title from '../Title';
 import Member, { TMember } from './Member';
 
@@ -17,7 +19,7 @@ const Wrapper = styled.div`
 const TitleWrapper = styled.div<{ src: string }>`
   position: relative;
   margin-top: 3%;
-  background: url(${p => p.src}) no-repeat center / contain;
+  background: url(${(p) => p.src}) no-repeat center / contain;
   width: 200px;
   height: 200px;
 
@@ -36,7 +38,7 @@ const StyledTitle = styled(Title)`
   will-change: transform;
   white-space: nowrap;
   position: absolute;
-  color: ${p => p.theme.colors.white};
+  color: ${(p) => p.theme.colors.white};
   left: 50%;
   transform: translateX(-50%);
   top: 75px;
@@ -80,8 +82,8 @@ const team: TMember[] = [
   {
     name: '李至青',
     avatar: getRelativePath('/static/images/jhincing.jpg'),
-    title: '共同創辦人暨\n資深產品經理',
-    jobDescription: '擅於產品脈絡設計 / 軟體開發流程管理 / 資深軟體工程師',
+    title: '共同創辦人暨\n軟體工程師',
+    jobDescription: '網頁應用程式開發 / 軟體開發流程管理',
   },
 ];
 
