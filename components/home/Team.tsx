@@ -1,9 +1,7 @@
 import styled from 'styled-components';
-
 import Section from '@/components/Section';
 import { getRelativePath } from '@/utils';
 import { media } from '@/utils/theme';
-
 import Title from '../Title';
 import Member, { TMember } from './Member';
 
@@ -19,7 +17,7 @@ const Wrapper = styled.div`
 const TitleWrapper = styled.div<{ src: string }>`
   position: relative;
   margin-top: 3%;
-  background: url(${(p) => p.src}) no-repeat center / contain;
+  background: url(${p => p.src}) no-repeat center / contain;
   width: 200px;
   height: 200px;
 
@@ -38,7 +36,7 @@ const StyledTitle = styled(Title)`
   will-change: transform;
   white-space: nowrap;
   position: absolute;
-  color: ${(p) => p.theme.colors.white};
+  color: ${p => p.theme.colors.white};
   left: 50%;
   transform: translateX(-50%);
   top: 75px;
