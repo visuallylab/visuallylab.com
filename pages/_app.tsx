@@ -1,9 +1,10 @@
 import App from 'next/app';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { appWithTranslation } from '@/i18n';
 
+import DemoStateProvider from '@/contexts/DemoStateProvider';
 import GlobalStateProvider from '@/contexts/GlobalStateProvider';
+import { appWithTranslation } from '@/i18n';
 import theme from '@/themes/theme';
 
 class MyApp extends App {
@@ -14,15 +15,23 @@ class MyApp extends App {
       pageProps = await Component.getInitialProps(ctx);
     }
 
-    return { pageProps };
+    return { pageProps, isStartJarvis: ctx.pathname.includes('/demo') };
   }
 
   render() {
-    const { Component, pageProps } = this.props;
+    // @ts-ignore
+    const { Component, pageProps, isStartJarvis } = this.props;
+
     return (
       <ThemeProvider theme={theme}>
         <GlobalStateProvider>
-          <Component {...pageProps} />
+          {isStartJarvis ? (
+            <DemoStateProvider>
+              <Component {...pageProps} />
+            </DemoStateProvider>
+          ) : (
+            <Component {...pageProps} />
+          )}
         </GlobalStateProvider>
       </ThemeProvider>
     );
